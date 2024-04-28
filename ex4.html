@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function calcularDivision(num1, num2) {
+      return new Promise((resolve, reject) => {
+        if (num2 === 0) {
+          reject("Error: No se puede dividir entre cero.");
+        } else {
+          const resultado = num1 / num2;
+          resolve(`El resultado de la división es ${resultado}`);
+        }
+      });
+    }
+    
+    // Uso de la función con async/await
+    async function realizarDivision() {
+      try {
+        const resultado = await calcularDivision(10, 2); // Cambia estos números para probar
+        console.log(resultado);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    
+    realizarDivision();
+  </script>
+</body>
+</html>
+
+
+  
