@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  const comprobarValor = new Promise((resolve, reject) => {
+      const valor = 5; // Puedes cambiar este valor para probar diferentes casos
+      if (valor >= 0 && valor <= 10) {
+        resolve(`El valor ${valor} está entre 0 y 10.`);
+      } else {
+        reject(`El valor ${valor} no está entre 0 y 10.`);
+      }
+    });
+    
+    comprobarValor
+      .then(console.log)
+      .catch(console.log);
+  </script>
+</body>
+</html>
+
+  
