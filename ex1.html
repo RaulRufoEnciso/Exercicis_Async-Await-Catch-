@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    function esDivisiblePorDos(numero) {
+      return new Promise((resolve, reject) => {
+        if (numero % 2 === 0) {
+          resolve(`El número ${numero} es divisible por dos.`);
+        } else {
+          reject(`El número ${numero} no es divisible por dos.`);
+        }
+      });
+    }
+
+    // Uso de la función con async/await
+    async function comprobarDivisibilidad() {
+      try {
+        const resultado = await esDivisiblePorDos(4); // Cambia el número por el que quieras comprobar
+        console.log(resultado);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  comprobarDivisibilidad();
+
+  </script>
+</body>
+</html>
+
