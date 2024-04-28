@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function esVocal(letra) {
+      let arr = ["a", "e", "i", "o", "u"];
+      return new Promise((resolve, reject) => {
+        if (arr.includes(letra)) {
+          resolve(`La letra "${letra}" es una vocal.`);
+        } else {
+          reject(`La letra "${letra}" no es una vocal.`);
+        }
+      });
+    }
+    
+    // Uso de la función con async/await
+    async function comprobarSiEsVocal() {
+      try {
+        const resultado = await esVocal('a'); // Cambia 'a' por otra letra para probar
+        console.log(resultado);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    
+    comprobarSiEsVocal();
+  </script>
+</body>
+</html>
+
+
+  
